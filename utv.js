@@ -233,6 +233,12 @@
 			;
 			return utv.childElem(elem);
 		}
+		,parentElem:function(){
+			var _self = this
+			,elem = _self.elems[0]
+			;
+			return utv.parentElem(elem);
+		}
 		,getElem:function(expression){//查找所有元素
 			var _self = this
 				,elem = _self.elems[0]
@@ -264,7 +270,7 @@
 				utv.setStyle(n,name,value);
 			});
 
-			return this;	
+			return this;
 		}
 		,getHTML:function(){
 			var _self = this
@@ -372,7 +378,7 @@
 		return name === 'opacity' ? Math.round(_attr)*100:_attr;
 	};
 
-	//设置元素的样式  如果是margin-top 要写成marginTop  
+	//设置元素的样式  如果是margin-top 要写成marginTop
 	utv.setStyle = function(elem,name,value){
 		elem.style[name] = value;
 	};
@@ -387,7 +393,7 @@
 		utv.each(_chidNodes,function(i,n){
 			if(n.nodeType === 1 && n != elem){
 				_nodes.push(n);
-			}		
+			}
 		})
 		/*
 		while ((elem = elem.previousSibling)){
@@ -716,7 +722,7 @@
 		var url = win.location.href //获取url
 			,request = {}
 			,str=''
-			,remStr = rem || '?' 
+			,remStr = rem || '?'
 			,index = url.indexOf(remStr)
 		;
 	   if (index != -1) {
@@ -756,7 +762,7 @@
 		,num8:56 //数字8
 		,num9:57 //数字9
 		,back:8 //返回键
-		,pound:319 //#键   
+		,pound:319 //#键
 		,asterisk:318 //*键
 		,enter:13// 确定键
 		,pageUp:306 //上翻
